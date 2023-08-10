@@ -26,4 +26,29 @@ def sort(s):
   sorted_str = ''.join(upper + lower)
   print('Result:', sorted_str)
 
+#3
+def test_for_anagrams (s1, s2):
+
+  s1 = s1.lower()
+  s2 = s2.lower()
+  count = 0
+  if (len(s1) != len(s2)):
+        return (False)
+  else:
+        for i in range(0, len(s1)):
+            for j in range(0, len(s2)):
+                if(s1[i] == s2[j]):
+                    count += 1
+            if (count == len(s1)):
+              return (True)
+        else:
+            return (False)
+s1 = input("Enter a string 1: ")
+s2 = input("Enter a string 2: ")
+result = test_for_anagrams (s1, s2)
+print (result)  
+print("************")
+
+
+
 
