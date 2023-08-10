@@ -1,8 +1,13 @@
 #1
-def reversed_string(text):
-result = ""
-index = len(text) - 1
-while index >= 0:
-result += text[index]
-index -= 1
-return result
+def reverse(s,i):
+  
+  s=input("Enter the list to be reversed: ")
+  i=int(input("Enter the number of concatenation: "))
+  
+  if i == 0:
+    return " "
+  else:
+    reverse_s = s[::-1]
+    new = reverse_s * i
+  return new
+print("Reversed list is :" + reverse(" ",0))
